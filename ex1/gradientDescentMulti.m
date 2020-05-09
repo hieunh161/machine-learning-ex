@@ -18,9 +18,8 @@ for iter = 1:num_iters
     %
 
 
-
-
-
+    J_history(iter) = computeCost(X, y, theta);
+    theta = theta - (alpha/m)*sum(X'*(X*theta - y),2);
 
 
 
