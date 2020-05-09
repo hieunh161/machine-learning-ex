@@ -82,7 +82,7 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.01;
+alpha = 0.9;
 num_iters = 50;
 
 % Init Theta and Run Gradient Descent 
@@ -106,7 +106,7 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 X_test = [1650 3];
-X_test_norm = (X_test - mu)./sigma
+X_test_norm = (X_test - mu)./sigma;
 X_test_norm = [1 X_test_norm];
 price = X_test_norm*theta;
 
@@ -153,7 +153,8 @@ fprintf('\n');
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
-
+X_test = [1 1650 3];
+price = X_test*theta;
 
 % ============================================================
 
